@@ -1,0 +1,9 @@
+service: vue-auth0-prisma
+stage: dev
+
+datamodel: datamodel.graphql
+
+# to enable auth, provide
+secret: ${env:PRISMA_SECRET}
+disableAuth: true
+cluster: geirbo/prisma-eu1 #your-username/cluster-name - remove this whwn deploying the first time (it will be inserted)
