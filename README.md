@@ -11,7 +11,7 @@ https://github.com/LawJolla/prisma-auth0-example (go here for auth0 setup descri
 ## Quickstart
 ```
 git clone http...
-cd vue-auth0-graphql/client
+cd prisma-auth0-vue/client
 cp example.auth0-variables.js auth0-variables.js // Then fill in your auth0 params
 yarn install
 yarn dev
