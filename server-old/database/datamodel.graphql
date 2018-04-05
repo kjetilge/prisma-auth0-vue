@@ -5,7 +5,7 @@ enum Role {
 
 type Post {
   id: ID! @unique
-  isPublished: Boolean!
+  isPublished: Boolean! @default(value: false)
   title: String!
   text: String!
   testString: String
@@ -14,8 +14,10 @@ type Post {
 
 type User {
   id: ID! @unique
+  createdAt: DateTime!
+  updatedAt: DateTime!
   email: String! @unique
-  role: Role @default(value: CUSTOMER)
+  role: Role! @default(value: CUSTOMER)
   name: String
   avatar: String
   auth0id: String! @unique

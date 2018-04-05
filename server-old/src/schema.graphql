@@ -1,4 +1,4 @@
-# import Query.users, Post from "./generated/prisma.graphql"
+# import Post from "./generated/prisma.graphql"
 
 directive @isAuthenticated on QUERY | FIELD | MUTATION
 directive @hasRole(roles: [String]) on QUERY | FIELD | MUTATION
@@ -14,15 +14,15 @@ type Query {
 
 type Mutation {
   authenticate(idToken: String!): User
-  createDraft(title: String!, text: String): Post @isAuthenticated
-  deletePost(id: ID!): Post @isOwnerOrHasRole(type: "Post", roles: ["ADMIN"])
+  createDraft(title: String!, text: String): Post @hasRole(type: "Post", roles: ["CUSTOMER"]) #Post @isAuthenticated
+  deletePost(id: ID!): Post @isOwnerOrHasRole(type: "Post", roles: ["admin"])
   publish(id: ID!): Post @isOwner(type: "Post")
 }
 
 type User {
   id: ID!
-  email: String! @isOwner(type: "User")
-  role: Role
+  email: String!
+  role: Role!
   name: String
   avatar: String
   identity: String

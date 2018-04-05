@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import auth from '@/auth'
-import { provide } from '@/apolloProvider'
+import auth from './auth'
+import { provide, client } from '@/apolloProvider'
 
+// const auth = new Auth((result) => console.log('auth result', result), client)
 Vue.use(auth)
 Vue.config.productionTip = false
 

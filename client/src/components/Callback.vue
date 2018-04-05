@@ -21,8 +21,9 @@ const AUTHENTICATE = gql`
 export default {
   name: 'callback',
   mounted() {
-    this.$auth.handleAuthentication().then((data) => {
-      console.log('handleAuthentication callback data', data)
+    console.log('mounted')
+    this.$auth.handleAuthentication(function (data) {
+      console.log('callback data', data)
     })
   },
   components: {

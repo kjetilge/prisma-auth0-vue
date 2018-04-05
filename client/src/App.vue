@@ -5,12 +5,13 @@
       <router-link v-bind:to="'/'" exact class="link dim f6 f5-ns dib mr3 black" title="Feed">Feed</router-link>
       <router-link v-bind:to="'/drafts'" exact class="link dim f6 f5-ns dib mr3 black" title="Drafts">Drafts</router-link>
 
-      <a href="#" v-if="!$auth.isAuthenticated()" @click="$auth.login" class="link dim f6 f5-ns dib mr3 black">Login</a>
-      <a href="#" v-if="$auth.isAuthenticated()" @click="$auth.logout" class="link dim f6 f5-ns dib mr3 black">Logout</a>
-      <router-link v-bind:to="'/create'" v-if="$auth.isAuthenticated()" exact class="f6 link dim br1 ba ph3 pv2 fr mb2 dib black" title="Drafts">+ Create Draft</router-link>
+      <a href="#" v-if="!$auth.isAuthenticated" @click="$auth.login" class="link dim f6 f5-ns dib mr3 black">Login</a>
+      <a href="#" v-if="$auth.isAuthenticated" @click="$auth.logout" class="link dim f6 f5-ns dib mr3 black">Logout</a>
+      <router-link v-bind:to="'/create'" v-if="$auth.isAuthenticated" exact class="f6 link dim br1 ba ph3 pv2 fr mb2 dib black" title="Drafts">+ Create Draft</router-link>
     </nav>
 
     <div class="fl w-100 pl4 pr4">
+      <!--h3>isAuthenticated: {{$auth.isAuthenticated}}</h3-->
       <router-view/>
     </div>
   </div>

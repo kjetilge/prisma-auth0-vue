@@ -5,5 +5,5 @@ datamodel: datamodel.graphql
 
 # to enable auth, provide
 secret: ${env:PRISMA_SECRET}
-disableAuth: true
-cluster: geirbo/prisma-eu1 #your-username/cluster-name - remove this whwn deploying the first time (it will be inserted)
+#disableAuth: true
+cluster: geirbo/prisma-eu1
