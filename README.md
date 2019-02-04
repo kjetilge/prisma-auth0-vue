@@ -5,6 +5,7 @@
 
 ## Credits:
 [StoryBlok > How to add Auth0 Authentication to a Vue.js App](https://www.storyblok.com/tp/how-to-auth0-vuejs-authentication)
+
 [LawJolla/prisma-auth0-example (go here for auth0 setup description)](https://github.com/LawJolla/prisma-auth0-example)
 
 
