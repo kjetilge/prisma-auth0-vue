@@ -1,6 +1,6 @@
 # prisma-auth0-vue
 
-### Authentification and authorization with vue, auth0 and prisma/graphql
+### Authentification and authorization with [Vue](https://vuejs.org/), [Auth0](https://auth0.com/) and [Prisma](https://prisma.io)/[GraphQL](https://graphql.org/)
 ![Authenticating with spinner](screenshots/authenticating.png "Authenticating.png")
 
 ## Credits:
